@@ -1,3 +1,5 @@
+"""streamlit app for exploring Furesø Lake in Denmark."""
+
 import numpy as np
 import pandas as pd
 import streamlit as st
