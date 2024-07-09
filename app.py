@@ -1,3 +1,5 @@
+import numpy as np
+import pandas as pd
 import streamlit as st
 
 # Language selection flag (initialize as English)
@@ -15,9 +17,7 @@ def display_content(key, danish_text, english_text):
 # Title and subtitle
 eng = "Explore Furesø - Wildlife, History, and More"
 dk = "Udforsk Furesø - Dyreliv, Historie og Mere"
-st.title(
-    f"""{eng if selected_language == 'English' else dk}"""
-)
+st.title(f"""{eng if selected_language == 'English' else dk}""")
 
 x = 1
 
@@ -39,6 +39,15 @@ if navigation == "Map":
   (optional), and points of interest (POIs) with popups for details.
   """
     )
+    # Create a base map centered on a certain location (adjust as needed)
+
+    # Display the map with markers
+    df = pd.DataFrame(
+        np.random.randn(45, 2) / [50, 50] + [55.7944, 12.3562], columns=["lat", "lon"]
+    )
+
+    st.map(df)
+
 elif navigation == "Wildlife":
     display_content(x, "Dyrelivet i Furesø", "Wildlife of Furesø")
     # Placeholder for wildlife images and text (replace with actual content)
