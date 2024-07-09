@@ -13,8 +13,10 @@ def display_content(key, danish_text, english_text):
 
 
 # Title and subtitle
+eng = "Explore Furesø - Wildlife, History, and More"
+dk = "Udforsk Furesø - Dyreliv, Historie og Mere"
 st.title(
-    f"{'Furesø - The Jewel of Copenhagen' if selected_language == 'English' else 'Udforsk Furesø - Dyreliv, Historie og Mere'}"
+    f"""{eng if selected_language == 'English' else dk}"""
 )
 
 x = 1
@@ -28,7 +30,8 @@ with st.sidebar:
 
 # Display content based on navigation selection
 if navigation == "Map":
-    # Placeholder for map using streamlit-elements and Leaflet (replace with actual code)
+    # Placeholder for map using streamlit-elements
+    #  and Leaflet (replace with actual code)
     st.write("**Map Placeholder**")
     st.markdown(
         """This section will display an interactive map of Furesø Lake using
@@ -56,7 +59,7 @@ elif navigation == "Wildlife":
         }
     )
     st.write(
-        """**Planteædere alger (Poisonous Algae):** 
+        """**Planteædere alger (Poisonous Algae):**
         (Brief description and link to a detailed resource)"""
     )
 elif navigation == "History":
