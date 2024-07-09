@@ -31,9 +31,8 @@ if navigation == "Map":
     # Placeholder for map using streamlit-elements and Leaflet (replace with actual code)
     st.write("**Map Placeholder**")
     st.markdown(
-        """ 
-  This section will display an interactive map of Furesø Lake using 
-  streamlit-elements and Leaflet. It will include zoom controls, geolocation 
+        """This section will display an interactive map of Furesø Lake using
+  streamlit-elements and Leaflet. It will include zoom controls, geolocation
   (optional), and points of interest (POIs) with popups for details.
   """
     )
@@ -46,8 +45,19 @@ elif navigation == "Wildlife":
         """This section will showcase the diverse wildlife found in Furesø
           Lake, including fish, birds, and mammals."""
     )
+    st.dataframe(
+        {
+            "Species": ["Pike", "Cormorant", "Otter"],
+            "Description": [
+                "Pike is a common fish species in Furesø Lake.",
+                "Cormorants are often seen diving for fish in the lake.",
+                "Otters are occasionally spotted near the shores of the lake.",
+            ],
+        }
+    )
     st.write(
-        "**Planteædere alger (Poisonous Algae):** (Brief description and link to a detailed resource)"
+        """**Planteædere alger (Poisonous Algae):** 
+        (Brief description and link to a detailed resource)"""
     )
 elif navigation == "History":
     display_content(x, "Furesøs Historie", "History of Furesø")
@@ -55,24 +65,31 @@ elif navigation == "History":
     st.write("**Placeholder for historical text**")
     st.image("placeholder_historical_image.jpg", width=500)
     st.write(
-        "This section will outline the historical significance of Furesø Lake, including geological formation, human settlements, and cultural aspects."
+        """This section will outline the historical significance of
+          Furesø Lake, including geological formation, human settlements,
+            and cultural aspects."""
     )
 elif navigation == "Guides":
     display_content(x, "Guide til Furesø", "Guides for Furesø")
     # Placeholder for guide information (replace with actual content)
     st.write("**Placeholder for guide information**")
     st.write(
-        "This section will provide resources and information for visitors, including hiking/biking trails, birdwatching tips, fishing regulations, and links to local guides."
+        """This section will provide resources and information for visitors,
+          including hiking/biking trails, birdwatching tips,
+            fishing regulations, and links to local guides."""
     )
 elif navigation == "Useful Info":
-    display_content(x,"Nyttige Informationer", "Useful Information")
+    display_content(x, "Nyttige Informationer", "Useful Information")
     # Placeholder for useful information (replace with actual content)
     st.write("**Placeholder for useful information**")
     st.write(
-        "This section will provide practical details for visitors, including transportation, parking, accessibility, amenities, and emergency contacts."
+        """This section will provide practical details for visitors,
+          including transportation, parking, accessibility, amenities,
+            and emergency contacts."""
     )
 
 # Display a note about placeholders
 st.write(
-    "**Note:** This is a mockup with placeholders. Replace them with actual content, images, and functionalities."
+    """**Note:** This is a mockup with placeholders. Replace them with
+      actual content, images, and functionalities."""
 )
