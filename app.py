@@ -45,7 +45,11 @@ if navigation == "Map":
 
     # Display the map with markers
     df = pd.DataFrame(
-        np.random.randn(45, 2) / [50, 50] + [55.7944, 12.3562], columns=["lat", "lon"]
+        np.random.randn(45, 2) / [50, 50] + [55.7944, 12.3562],
+        columns=[
+            "lat",
+            "lon",
+        ],
     )
 
     st.map(df)
