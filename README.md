@@ -4,6 +4,8 @@
 
 [app](https://fureso.streamlit.app/)
 
+![app](images/app.png)
+
 This Streamlit app is your one-stop guide to Furesø Lake, a captivating natural wonder near Copenhagen.  Whether you're a local Dane seeking a deeper understanding of this cherished landmark ️ or an English-speaking visitor planning a trip , this app has something for everyone!
 
 **Key Features:**
