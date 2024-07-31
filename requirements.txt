@@ -1,3 +1,5 @@
-streamlit
+flake8
 numpy
 pandas
+pylint
+streamlit
