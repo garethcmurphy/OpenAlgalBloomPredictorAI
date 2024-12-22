@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fureso"
+version = "0.1.0"
+description = ""
+authors = ["Gareth Murphy <16783958+garethcmurphy@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+flake8 = "^7.1.1"
+numpy = "^2.2.1"
+pandas = "^2.2.3"
+pylint = "^3.3.2"
+streamlit = "^1.41.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

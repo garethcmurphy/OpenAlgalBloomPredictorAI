@@ -57,7 +57,7 @@ if navigation == "Map":
 elif navigation == "Wildlife":
     display_content(x, "Dyrelivet i Furesø", "Wildlife of Furesø")
     # Placeholder for wildlife images and text (replace with actual content)
-    st.image("placeholder_wildlife_image.jpg", width=500)
+    st.image("images/placeholder_wildlife_image.jpg", width=500)
     st.write("**Placeholder for wildlife descriptions**")
     st.write(
         """This section will showcase the diverse wildlife found in Furesø
@@ -81,7 +81,7 @@ elif navigation == "History":
     display_content(x, "Furesøs Historie", "History of Furesø")
     # Placeholder for historical text and images (replace with actual content)
     st.write("**Placeholder for historical text**")
-    st.image("placeholder_historical_image.jpg", width=500)
+    st.image("images/placeholder_historical_image.jpg", width=500)
     st.write(
         """This section will outline the historical significance of
           Furesø Lake, including geological formation, human settlements,
