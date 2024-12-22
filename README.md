@@ -1,6 +1,4 @@
-
-**Furesø Lake App - Explore  Copenhagen 🇩🇰 (or Explore Furesø - Wildlife, History & More ️) 🇬🇧**
-
+# Furesø Lake App - Explore Copenhagen 🇩🇰 (or Explore Furesø - Wildlife, History & More ️) 🇬🇧
 
 [app](https://fureso.streamlit.app/)
 
@@ -10,7 +8,7 @@ This Streamlit app is your one-stop guide to Furesø Lake, a captivating natural
 
 **Key Features:**
 
-- **Interactive Map** (using `streamlit-elements` and Leaflet): ️ Explore Furesø Lake with an interactive map, complete with zoom controls and optional geolocation. Discover points of interest (POIs) like birdwatching spots, fishing areas, and historical landmarks, all enriched with informative popups. 
+- **Interactive Map** (using `streamlit-elements` and Leaflet): ️ Explore Furesø Lake with an interactive map, complete with zoom controls and optional geolocation. Discover points of interest (POIs) like birdwatching spots, fishing areas, and historical landmarks, all enriched with informative popups.
 - **Wildlife Galore** : Delve into the diverse wildlife that calls Furesø Lake home. Learn about fish species , a variety of birdlife (including majestic woodpeckers 啄木鸟!), and other mammals . We'll also touch upon poisonous algae (Planteædere alger) ⚠️ and its potential effects, along with resources for further exploration.
 - **A Rich History** : Uncover the fascinating history of Furesø Lake, from its geological formation  to the impact of human settlements over time ‍‍‍. Explore its cultural significance through folklore and myths .
 - **Essential Guides** : Get the most out of your visit with our comprehensive guides. Discover the best hiking and biking trails ‍♀️, tips for birdwatching and nature observation , fishing regulations and permits , and links to local visitor centers or guide services .
