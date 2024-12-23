@@ -1,5 +1,9 @@
 # Furesø Lake App - Explore Copenhagen 🇩🇰 (or Explore Furesø - Wildlife, History & More ️) 🇬🇧
 
+## repo link
+
+[repo](https://github.com/garethcmurphy/fureso)
+
 [app](https://fureso.streamlit.app/)
 
 ![app](src/assets/images/app.png)
