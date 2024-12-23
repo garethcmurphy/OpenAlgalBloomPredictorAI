@@ -33,4 +33,7 @@ class WildlifeComponent:
             """**Planteædere alger (Poisonous Algae):**
             (Brief description and link to a detailed resource)"""
         )
-        
+        st.write(
+            """**Fugle (Birds):**
+            (Brief description and link to a detailed resource)"""
+        )
