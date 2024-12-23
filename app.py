@@ -1,11 +1,11 @@
 """Streamlit app for exploring Furesø Lake in Denmark."""
 
 import streamlit as st
-from components.map_component import MapComponent
-from components.wildlife_component import WildlifeComponent
-from components.history_component import HistoryComponent
-from components.guides_component import GuidesComponent
-from components.useful_info_component import UsefulInfoComponent
+from src.components.map_component import MapComponent
+from src.components.wildlife_component import WildlifeComponent
+from src.components.history_component import HistoryComponent
+from src.components.guides_component import GuidesComponent
+from src.components.useful_info_component import UsefulInfoComponent
 
 
 class FuresoeExplorerApp:
