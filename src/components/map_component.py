@@ -1,9 +1,12 @@
+"""map_component.py"""
 import streamlit as st
 import pandas as pd
 import numpy as np
 
 class MapComponent:
+    """Component for displaying an interactive map of Furesø Lake."""
     def display(self, language):
+        """Display the map component based on the selected language."""
         st.write("**Map Placeholder**")
         st.markdown(
             """This section will display an interactive map of Furesø Lake using

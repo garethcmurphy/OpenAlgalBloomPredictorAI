@@ -7,7 +7,7 @@ class HistoryComponent:
         else:
             st.write("History of Furesø")
         st.write("**Placeholder for historical text**")
-        st.image("assets/images/placeholder_historical_image.jpg", width=500)
+        st.image("src/assets/images/placeholder_historical_image.jpg", width=500)
         st.write(
             """This section will outline the historical significance of
             Furesø Lake, including geological formation, human settlements,

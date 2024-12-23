@@ -1,7 +1,10 @@
+"""Useful Information Component"""
 import streamlit as st
 
 class UsefulInfoComponent:
+    """Component for displaying useful information for visitors."""
     def display(self, language):
+        """Display useful information based on the selected language."""
         if language == "Danish":
             st.write("Nyttige Informationer")
         else:
