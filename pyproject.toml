@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "fureso"
 version = "0.1.0"
-description = ""
-authors = ["Gareth Murphy <16783958+garethcmurphy@users.noreply.github.com>"]
+description = "Fureso app for wildlife and map"
+authors = ["Gareth Murphy"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
