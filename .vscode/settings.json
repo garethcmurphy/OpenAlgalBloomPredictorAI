@@ -1,4 +1,7 @@
 {
+    "python.analysis.extraPaths": [
+        "/Users/garethmurphy/Library/Caches/pypoetry/virtualenvs/fureso-2g31n8s9-py3.13/lib/python3.13/site-packages",
+    ],
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#92a2f7",
         "activityBar.background": "#92a2f7",
