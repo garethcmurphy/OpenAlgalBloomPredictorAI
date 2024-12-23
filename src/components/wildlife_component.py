@@ -12,7 +12,7 @@ class WildlifeComponent:
             st.write("Dyrelivet i Furesø")
         else:
             st.write("Wildlife of Furesø")
-        st.image("assets/images/placeholder_wildlife_image.jpg", width=500)
+        st.image("src/assets/images/placeholder_wildlife_image.jpg", width=500)
         st.write("**Placeholder for wildlife descriptions**")
         st.write(
             """This section will showcase the diverse wildlife found in Furesø
