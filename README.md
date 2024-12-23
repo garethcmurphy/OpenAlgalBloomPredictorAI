@@ -21,8 +21,8 @@ This Streamlit app is your one-stop guide to Furesø Lake, a captivating natural
 **Getting Started:**
 
 1. **Prerequisites:** Ensure you have Python  and `streamlit`  installed. You might also need `streamlit-elements` and a map library like Leaflet for the interactive map.
-2. **Clone the Repository:** Use `git clone https://github.com/your-username/furesø-lake-app.git` to clone this repository.
-3. **Install Dependencies:** Run `pip install -r requirements.txt` (assuming you have a `requirements.txt` file listing the necessary libraries).
+2. **Clone the Repository:** Use `git clone https://github.com/garethcmurphy/furesø-lake-app.git` to clone this repository.
+3. **Install Dependencies:** Run `poetry install` (assuming you have a poetry installed).
 4. **Run the App:** Execute `streamlit run app.py` (replace `app.py` with your actual app file name) to launch the Streamlit app in your web browser.
 
 **Customization:**
