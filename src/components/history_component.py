@@ -1,7 +1,13 @@
+"""history_component.py"""
+
 import streamlit as st
 
+
 class HistoryComponent:
+    """Component for displaying the history of Furesø Lake."""
+
     def display(self, language):
+        """Display the history of Furesø Lake based on the selected language."""
         if language == "Danish":
             st.write("Furesøs Historie")
         else:

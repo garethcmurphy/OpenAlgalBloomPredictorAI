@@ -8,6 +8,7 @@ class WildlifeComponent:
  which is responsible for displaying information about
    the wildlife of Furesø Lake."""
     def display(self, language):
+        """Display the wildlife of Furesø Lake based on the selected language."""
         if language == "Danish":
             st.write("Dyrelivet i Furesø")
         else:
@@ -32,3 +33,4 @@ class WildlifeComponent:
             """**Planteædere alger (Poisonous Algae):**
             (Brief description and link to a detailed resource)"""
         )
+        

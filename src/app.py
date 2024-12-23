@@ -24,6 +24,7 @@ class FuresoeExplorerApp:
 
     def display_content(self, key, danish_text, english_text):
         """Display content based on the selected language."""
+        print(key)
         if self.selected_language == "Danish":
             st.write(danish_text)
         else:
