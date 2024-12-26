@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+"""algal_bloom_predictor.py"""
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -8,12 +10,14 @@ from sklearn.model_selection import train_test_split
 
 
 class AlgalBloomPredictor:
+    """algal_bloom_predictor.py"""
     def __init__(self, data_path):
         """
         Initialize the predictor.
 
         Parameters:
-            data_path (str): Path to the CSV dataset containing water quality and environmental data.
+            data_path (str): Path to the CSV dataset containing water quality
+              and environmental data.
         """
         self.generate_synthetic_data(data_path, 1000)
         self.data = pd.read_csv(data_path)
@@ -21,7 +25,8 @@ class AlgalBloomPredictor:
 
     def preprocess_data(self):
         """
-        Preprocess the dataset: handle missing values, encode categorical variables, and normalize data.
+        Preprocess the dataset: handle missing values,
+          encode categorical variables, and normalize data.
         """
         # Handle missing values
         self.data.fillna(self.data.mean(), inplace=True)
