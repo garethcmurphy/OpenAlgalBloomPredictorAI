@@ -61,7 +61,7 @@ class AlgalBloomPredictor:
         plt.title("Confusion Matrix")
         plt.xlabel("Predicted")
         plt.ylabel("Actual")
-        plt.show()
+        plt.savefig("confusion_matrix.png")
 
     def visualize_data(self):
         """
@@ -71,13 +71,14 @@ class AlgalBloomPredictor:
         sns.pairplot(
             self.data, hue="bloom", diag_kind="kde"
         )  # Replace 'bloom' with your target column name
+        plt.savefig("pairplot.png")
         plt.show()
 
         # Correlation heatmap
         plt.figure(figsize=(10, 8))
         sns.heatmap(self.data.corr(), annot=True, cmap="coolwarm", fmt=".2f")
         plt.title("Feature Correlation Heatmap")
-        plt.show()
+        plt.savefig("feature_correlation_heatmap.png")
 
     def predict(self, new_data):
         """
@@ -120,7 +121,7 @@ class AlgalBloomPredictor:
 
 # Example usage
 
-predictor = AlgalBloomPredictor(data_path="algalbloom.csv")
+predictor = AlgalBloomPredictor(data_path="data/algalbloom.csv")
 predictor.preprocess_data()
 predictor.visualize_data()
 predictor.train_model()
