@@ -22,6 +22,12 @@ class AlgalBloomPredictor:
         self.generate_synthetic_data(data_path, 1000)
         self.data = pd.read_csv(data_path)
         self.model = None
+        self.X = None
+        self.X_train = None
+        self.X_test = None
+        self.y = None
+        self.y_train = None
+        self.y_test = None
 
     def preprocess_data(self):
         """
