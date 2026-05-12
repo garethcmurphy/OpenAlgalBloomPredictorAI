@@ -33,15 +33,25 @@ export function predict(input: PredictionInput): PredictionResult {
     bloomProbability < 0.75 ? 'High' :
     'Critical';
 
-  const factors = [
-    { factor: 'Temperature', impact: parseFloat((tempScore / rawProb * 100).toFixed(1)) },
-    { factor: 'Dissolved Oxygen', impact: parseFloat((doScore / rawProb * 100).toFixed(1)) },
-    { factor: 'Phosphorus', impact: parseFloat((pScore / rawProb * 100).toFixed(1)) },
-    { factor: 'Turbidity', impact: parseFloat((turbScore / rawProb * 100).toFixed(1)) },
-    { factor: 'pH', impact: parseFloat((pHScore / rawProb * 100).toFixed(1)) },
-    { factor: 'Nitrogen', impact: parseFloat((nScore / rawProb * 100).toFixed(1)) },
-    { factor: 'Rainfall', impact: parseFloat((rainScore / rawProb * 100).toFixed(1)) },
-  ].sort((a, b) => b.impact - a.impact);
+  const factors = rawProb === 0
+    ? [
+        { factor: 'Temperature', impact: 0 },
+        { factor: 'Dissolved Oxygen', impact: 0 },
+        { factor: 'Phosphorus', impact: 0 },
+        { factor: 'Turbidity', impact: 0 },
+        { factor: 'pH', impact: 0 },
+        { factor: 'Nitrogen', impact: 0 },
+        { factor: 'Rainfall', impact: 0 },
+      ]
+    : [
+        { factor: 'Temperature', impact: parseFloat((tempScore / rawProb * 100).toFixed(1)) },
+        { factor: 'Dissolved Oxygen', impact: parseFloat((doScore / rawProb * 100).toFixed(1)) },
+        { factor: 'Phosphorus', impact: parseFloat((pScore / rawProb * 100).toFixed(1)) },
+        { factor: 'Turbidity', impact: parseFloat((turbScore / rawProb * 100).toFixed(1)) },
+        { factor: 'pH', impact: parseFloat((pHScore / rawProb * 100).toFixed(1)) },
+        { factor: 'Nitrogen', impact: parseFloat((nScore / rawProb * 100).toFixed(1)) },
+        { factor: 'Rainfall', impact: parseFloat((rainScore / rawProb * 100).toFixed(1)) },
+      ].sort((a, b) => b.impact - a.impact);
 
   const recommendations: Record<string, string> = {
     Low: 'Water quality is good. Continue routine monitoring.',
