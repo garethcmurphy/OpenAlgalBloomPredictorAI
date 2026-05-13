@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Leaflet fixes */
+.leaflet-container {
+  z-index: 0;
+}

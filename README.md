@@ -1,44 +1,101 @@
-# Furesø Lake App - Explore Copenhagen 🇩🇰 (or Explore Furesø - Wildlife, History & More ️) 🇬🇧
+# Open Algal Bloom Predictor AI 🌊
 
-## repo link
+An open-source environmental monitoring tool using machine learning to predict harmful algal blooms in Furesø Lake, Denmark.
 
-[repo](https://github.com/garethcmurphy/fureso)
+## Live Applications
 
-[app](https://fureso.streamlit.app/)
+| Interface | URL |
+|-----------|-----|
+| **TypeScript UI (GitHub Pages)** | https://garethcmurphy.github.io/OpenAlgalBloomPredictorAI/ |
+| **Python Streamlit App** | https://fureso.streamlit.app/ |
+| **GitHub Repository** | https://github.com/garethcmurphy/OpenAlgalBloomPredictorAI |
 
-![app](src/assets/images/app.png)
+## Features
 
-This Streamlit app is your one-stop guide to Furesø Lake, a captivating natural wonder near Copenhagen.  Whether you're a local Dane seeking a deeper understanding of this cherished landmark ️ or an English-speaking visitor planning a trip , this app has something for everyone!
+### TypeScript UI (React + Vite)
+- 📊 **Dashboard** – live overview of all monitoring sites, stat cards, 30-day trend chart
+- 🔮 **Bloom Predictor** – interactive sliders for 7 water-quality parameters with instant AI risk assessment, contributing factors chart, and radar profile
+- 🗺️ **Interactive Map** – Leaflet/OpenStreetMap with colour-coded monitoring site markers, popups, and detail panel
+- 📈 **Historical Data** – 90-day charts (probability, temperature, phosphorus, scatter), raw data table
+- ℹ️ **About** – parameter guide, model explanation, technology stack
 
-**Key Features:**
+### Python / Streamlit App
+- 🗺️ Interactive map of Furesø Lake
+- 🦆 Wildlife information (fish, birds, mammals)
+- 📜 Lake history
+- 🥾 Visitor guides
+- ℹ️ Useful information
 
-- **Interactive Map** (using `streamlit-elements` and Leaflet): ️ Explore Furesø Lake with an interactive map, complete with zoom controls and optional geolocation. Discover points of interest (POIs) like birdwatching spots, fishing areas, and historical landmarks, all enriched with informative popups.
-- **Wildlife Galore** : Delve into the diverse wildlife that calls Furesø Lake home. Learn about fish species , a variety of birdlife (including majestic woodpeckers 啄木鸟!), and other mammals . We'll also touch upon poisonous algae (Planteædere alger) ⚠️ and its potential effects, along with resources for further exploration.
-- **A Rich History** : Uncover the fascinating history of Furesø Lake, from its geological formation  to the impact of human settlements over time ‍‍‍. Explore its cultural significance through folklore and myths .
-- **Essential Guides** : Get the most out of your visit with our comprehensive guides. Discover the best hiking and biking trails ‍♀️, tips for birdwatching and nature observation , fishing regulations and permits , and links to local visitor centers or guide services .
-- **Useful Information** ℹ️: Be prepared for your Furesø Lake adventure with practical details like public transportation options , parking information 🅿️, accessibility details for wheelchair users ♿️, nearby amenities (restaurants, restrooms) ️, and emergency contact information .
+## Repository Structure
 
-**Getting Started:**
+```
+├── app.py                          # Streamlit entry point
+├── src/
+│   ├── algal_bloom_predictor.py    # scikit-learn RandomForest model
+│   ├── components/                 # Streamlit page components
+│   └── assets/                     # Images
+├── ui/                             # React + TypeScript UI
+│   ├── src/
+│   │   ├── pages/                  # Dashboard, Predictor, Map, Data, About
+│   │   ├── components/             # Navbar, Footer, StatCard, RiskBadge
+│   │   ├── utils/predictor.ts      # Client-side ML approximation
+│   │   └── data/mockData.ts        # Synthetic sensor data
+│   └── vite.config.ts
+├── data/algalbloom.csv             # Synthetic training dataset
+├── .github/workflows/
+│   ├── python-app.yml              # Python CI (lint + test)
+│   └── deploy-pages.yml            # Build & deploy UI to GitHub Pages
+└── pyproject.toml                  # Python dependencies (Poetry)
+```
 
-1. **Prerequisites:** Ensure you have Python  and `streamlit`  installed. You might also need `streamlit-elements` and a map library like Leaflet for the interactive map.
-2. **Clone the Repository:** Use `git clone https://github.com/garethcmurphy/furesø-lake-app.git` to clone this repository.
-3. **Install Dependencies:** Run `poetry install` (assuming you have a poetry installed).
-4. **Run the App:** Execute `streamlit run app.py` (replace `app.py` with your actual app file name) to launch the Streamlit app in your web browser.
+## Getting Started
 
-**Customization:**
+### TypeScript UI
 
-This is a foundational framework. Feel free to customize it further by:
+```bash
+cd ui
+npm install
+npm run dev   # http://localhost:5173
+```
 
-- Adding more details and visuals to each section.
-- Integrating other functionalities like search bars or social media sharing buttons.
-- Enhancing the user interface with custom styling or Streamlit components.
+### Python App
 
-**Languages:**
+```bash
+# Install dependencies
+poetry install
 
-The app currently supports both Danish (Dansk) and English (English). You can select your preferred language from the sidebar.
+# Run the Streamlit app
+streamlit run app.py
 
-**Let's Explore Furesø Lake Together!**
+# Train the ML model
+python src/algal_bloom_predictor.py
+```
 
-We hope this app serves as a valuable resource for anyone interested in exploring Furesø Lake. Feel free to contribute to this project by creating pull requests or raising issues on the GitHub repository.
+## Water Quality Parameters
 
-**Happy exploring!**
+| Parameter | Unit | Risk Threshold |
+|-----------|------|----------------|
+| Temperature | °C | >20°C |
+| pH | – | 8–9 |
+| Dissolved Oxygen | mg/L | <5 mg/L |
+| Turbidity | NTU | >50 NTU |
+| Phosphorus | mg/L | >0.1 mg/L |
+| Nitrogen | mg/L | >2 mg/L |
+| Rainfall | mm | <5 mm (dry) |
+
+## Risk Levels
+
+| Level | Probability | Action |
+|-------|-------------|--------|
+| 🟢 Low | <25% | Routine monitoring |
+| 🟡 Moderate | 25–50% | Increase sampling frequency |
+| 🟠 High | 50–75% | Public advisory recommended |
+| 🔴 Critical | >75% | Immediate response required |
+
+## Contributing
+
+Please read the [Code of Conduct](CODE_OF_CONDUCT.md) and [Security Policy](SECURITY.md) before contributing.
+
+## License
+
+See [LICENSE](LICENSE).

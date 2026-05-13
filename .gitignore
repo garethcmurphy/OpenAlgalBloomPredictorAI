@@ -163,3 +163,7 @@ cython_debug/
 #.idea/
 config.json
 
+# Node / TypeScript UI
+ui/node_modules/
+ui/dist/
+
