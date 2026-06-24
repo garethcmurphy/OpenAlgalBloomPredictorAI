@@ -1,4 +1,15 @@
-numpy
-pandas
-pylint
-streamlit
+# Runtime dependencies
+numpy>=2.2.1
+pandas>=2.2.3
+streamlit>=1.41.1
+watchdog>=6.0.0
+seaborn>=0.13.2
+scikit-learn>=1.6.0
+matplotlib>=3.9.0
+
+# Development / testing dependencies
+flake8>=7.1.1
+pylint>=3.3.2
+ruff>=0.9.0
+black>=24.10.0
+pytest>=8.3.4

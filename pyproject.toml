@@ -1,27 +1,35 @@
-[tool.poetry]
-name = "fureso"
+[project]
+name = "openalgalbloompredictorai"
 version = "0.1.0"
-description = "Fureso app for wildlife and map"
-authors = ["Gareth Murphy"]
+description = "Algal bloom predictor AI using machine learning"
+authors = [{ name = "Gareth Murphy" }]
 readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.2.1",
+    "pandas>=2.2.3",
+    "streamlit>=1.41.1",
+    "watchdog>=6.0.0",
+    "seaborn>=0.13.2",
+    "scikit-learn>=1.6.0",
+    "matplotlib>=3.9.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.13"
-numpy = "^2.2.1"
-pandas = "^2.2.3"
-streamlit = "^1.41.1"
-watchdog = "^6.0.0"
-seaborn = "^0.13.2"
-scikit-learn = "^1.6.0"
-
-
-[tool.poetry.group.dev.dependencies]
-flake8 = "^7.1.1"
-pylint = "^3.3.2"
-ruff = "^0.8.4"
-black = "^24.10.0"
-pytest = "^8.3.4"
+[project.optional-dependencies]
+dev = [
+    "flake8>=7.1.1",
+    "pylint>=3.3.2",
+    "ruff>=0.9.0",
+    "black>=24.10.0",
+    "pytest>=8.3.4",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=70"]
+build-backend = "setuptools.backends.legacy:build"
+
+[tool.ruff]
+line-length = 127
+
+[tool.black]
+line-length = 127
